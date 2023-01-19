@@ -1,11 +1,13 @@
 #!/usr/bin/node
-const a = process.argv[2];
-const b = process.argv[3];
+
+// Script to add two integers
+
 function add (a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    return (NaN);
-  } else {
-    return (parseInt(a) + parseInt(b));
-  }
+  return (a + b);
 }
-console.log(add(a, b));
+
+if (isNaN(Number(process.argv[2])) || isNaN(Number(process.argv[3]))) {
+  console.log('NaN');
+} else {
+  console.log(add(parseInt(process.argv[2]), parseInt(process.argv[3])));
+}
