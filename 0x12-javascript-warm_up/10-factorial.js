@@ -1,10 +1,13 @@
 #!/usr/bin/node
-const a = process.argv[2];
-function factorial (a) {
-  if (isNaN(a) || a === 1) {
-    return (1);
+
+// Script to find the factorial of a number
+
+function factorial (num) {
+  if (num === 0 || isNaN(num)) {
+    return 1;
   } else {
-    return (a * factorial(a - 1));
+    return num * factorial(num - 1);
   }
 }
-console.log(factorial(parseInt(a)));
+
+console.log(factorial(parseInt(process.argv[2])));
