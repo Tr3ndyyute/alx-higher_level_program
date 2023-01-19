@@ -1,9 +1,13 @@
 #!/usr/bin/node
-const numArgs = process.argv.length - 2;
-if (numArgs === 0) {
+
+// Script that prints "JavaScript is amazing".
+
+if (process.argv.length === 2) {
   console.log('No argument');
-} else if (numArgs === 1) {
+}
+if (process.argv.length === 3) {
   console.log('Argument found');
-} else {
+}
+if (process.argv.length > 3) {
   console.log('Arguments found');
 }
