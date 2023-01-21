@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-""" print request id """
+"""
+    Script that takes in a URL, sends a request to the URL and dsiplays
+    value of the variable X-Request-Id
+"""
 import requests
 import sys
 
 
 if __name__ == "__main__":
     r = requests.get(sys.argv[1])
-    ri = r.headers.get('X-Request-Id')
-    print(ri)
+    print("{}".format(r.headers.get('X-Request-Id')))
